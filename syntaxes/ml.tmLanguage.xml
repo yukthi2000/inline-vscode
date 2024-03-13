@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "https://lang.exp/language.dtd">
+<language>
+    <metadata>
+        <property name="globs">*.ml</property>
+        <property name="name">My Language</property>
+        <property name="scopeName">source.my-language</property>
+    </metadata>
+
+    <patterns>
+        <pattern>
+            <match>\b(print|if|else|for|while)\b</match>
+            <name>keyword.control.my-language</name>
+        </pattern>
+        <pattern>
+            <match>\b\d+\b</match>
+            <name>constant.numeric.my-language</name>
+        </pattern>
+        <pattern>
+            <match>"(?:\\.|[^\\"])*"</match>
+            <name>string.quoted.double.my-language</name>
+        </pattern>
+        <pattern>
+            <match>\s+</match>
+            <name>whitespace</name>
+        </pattern>
+    </patterns>
+</language>

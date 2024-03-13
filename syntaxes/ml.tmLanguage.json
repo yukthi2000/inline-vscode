@@ -1,0 +1,42 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ml",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},{
+			"include": "#constants"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.ml",
+				"match": "\\b(if|while|for|return|yukthi|hettiarachchi)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.ml",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.ml",
+					"match": "\\\\."
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.language.ml",
+					"match": "\\b(true|false|pi|e)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.ml"
+}
